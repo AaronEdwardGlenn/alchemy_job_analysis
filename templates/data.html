@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>PDXDataVIZ</title>
+</head>
+<body class="m-5">
+    <h1>PDX Area Job Market Analysis for Alchemy Alumni</h1>
+    <h2 class="font-italic">Data scraped from glassdoor.com, all entries listed in the PDX area from July 20th - August 3rd 2020.</h2>
+    <h2 class="font-italic">265 data points were collected</h2>
+    <h5>*Note that a value of -1 denotes unavailable information.</h5>
+    <br>
+    <h3>Job titles:</h3>
+    <img src="{{url_for('static', filename='title.png')}}">
+    <h4>
+        Here we can see that most job titles contain 'software engineer'. This information could be useful when deciding what title to give yourself in your resume.
+    </h4>
+    <hr>
+    <br>
+    <h3>
+        Location:
+    </h3>
+    <img src="{{url_for('static', filename='location.png')}}">
+    <h4>
+        Most jobs listed are in PDX proper. 
+    </h4>
+    <hr>
+    <br>
+    <h3>
+        Headquarters:
+    </h3>
+    <img src="{{url_for('static', filename='headquarters.png')}}">
+    <h4>
+        While headquarters are primarily located in PDX, this also widely varies.  
+    </h4>
+    <hr>
+    <br>
+    <h3>
+        Year Founded:
+    </h3>
+    <img src="{{url_for('static', filename='founded.png')}}">
+    <hr>
+    <br>
+
+    <h3>
+        Industry:
+    </h3>
+    <img src="{{url_for('static', filename='industry.png')}}">
+    <h4>
+        Here we can see the most common industries hiring right now. 
+    </h4>
+    <hr>
+    <br>
+    <h3>
+        Firm Size:
+    </h3>
+    <img src="{{url_for('static', filename='emp_num.png')}}">
+    <h4>
+        Firm size is not directly correlated to job offer quantity. 
+    </h4>
+    <hr>
+    <br>
+    <h3>
+        Type of Ownership:
+    </h3>
+    <img src="{{url_for('static', filename='own_type.png')}}">
+    <h4>
+        Private firms are hiring at nearly double the rate of public firms.  
+    </h4>
+    <hr>
+    <br>
+    <h3>
+        Who is hiring?:
+    </h3>
+    <img src="{{url_for('static', filename='names.png')}}">
+    <h4>
+        This breaks down the top 25 firms currently hiring. 
+    </h4>
+    <hr>
+    <br>
+    <h3>
+        Business Sector:
+    </h3>
+    <img src="{{url_for('static', filename='sector.png')}}">
+    <h4>
+        Info tech and business services dominate the current hiring sectors.  
+    </h4>
+    <hr>
+    <br>
+    <h3>
+        Revenue:
+    </h3>
+    <img src="{{url_for('static', filename='rev.png')}}">
+    <h4>
+        We can see here that, on average, the companies with the highest revenue are creating the most hiring positions.   
+    </h4>
+    <hr>
+    <br>
+    <h3>
+        Common Alchemy Stacks in Job Descriptions:
+    </h3>
+    <img src="{{url_for('static', filename='jvsyn.png')}}">
+    <img src="{{url_for('static', filename='mongoyn.png')}}">
+    <img src="{{url_for('static', filename='nodeyn.png')}}">
+    <img src="{{url_for('static', filename='reactyn.png')}}">
+    <img src="{{url_for('static', filename='webpackyn.png')}}">
+    <h4>
+        These charts show the likelihood of a hiring firm's job description containing Javascript, MongoDB/mongoose, Node, React, or Webpack.     
+    </h4>
+    <hr>
+    <br>
+    <h3>
+        Average Salaries:
+    </h3>
+    <img src="{{url_for('static', filename='describe.png')}}">
+    <h4>
+        This table shows us the average salaries overall, and includes the average rating, year founded, age of firm, description length, and number of competitors listed.
+    </h4>
+    <hr>
+    <br>
+    <h3>
+        Average Salary Based on Job Title and Seniority:
+    </h3>
+    <img src="{{url_for('static', filename='avgsal_sen.png')}}">
+    <h4>
+        This chart shows us the break down of what the average salaries are for jobs based on how the title of the job is defined and the seniority of the job. 
+    </h4>
+    <hr>
+    <br>    
+    <h3>
+        Correlation Heatmap:
+    </h3>
+    <img src="{{url_for('static', filename='heatmap.png')}}">
+    <h4>
+        This heatmap shows us the corollary relationship between categories. If you look at the top left of the Y-axis, you can follow 'average_salary' and see which squares are darker on the X-axis. This conveys a stronger correlation.
+    </h4>
+    <hr>
+    <br>
+    <br>
+    <h2>
+        I hope you find this information useful or at least interesting. The number of datapoints is pretty low so the conclusions made here are far from definitive of broader trends. However, it does give us some insight on the current state of the job market for developers in the PDX area. 
+    </h2>
+    <p>
+        The code for this project can be found on<a href="https://github.com/AaronEdwardGlenn/alchemy_job_analysis"> my github.</a>
+    </p>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>

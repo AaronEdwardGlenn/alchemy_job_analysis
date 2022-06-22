@@ -65,7 +65,7 @@ nbformat==5.0.6
 nltk==3.5
 nodejs==0.1.1
 notebook==6.0.3
-numpy==1.18.4
+numpy==1.22.0
 openpyxl==3.0.4
 optional-django==0.1.0
 packaging==20.4
